@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python３
 # -*- coding: utf-8 -*-
 #运行环境 python3
 # 当前环境，archlinux
@@ -40,7 +40,9 @@ def Translate(string):
 			kc=1&tk=%s&q=%s' % (sl, tl, tk, text)
 
 	html = requests.get(url).content
+	html = str(html, encoding = "utf-8")
 	json = loads(html)
+
 
 	return json[0][0][0]
 
